@@ -181,7 +181,7 @@ const EditTodo = () => {
     <div className=" w-full relative min-h-screen bg-blue-600">
       <div className=" max-w-[1300px] px-10 max-md:px-5 m-auto">
         <div>
-          <TopNav title={"Edit Todo"} />
+          <TopNav title={"Edit Task"} />
 
           <div className="mt-10">
             <form className="max-w-[600px] m-auto">
