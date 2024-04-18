@@ -1,10 +1,11 @@
-import React, { useContext} from "react";
+import React, { useContext, useState } from "react";
 import Greeting from "../Utils/Greeting";
 import DisplayTodos from "../Utils/DisplayTodos";
 import { RxPlus } from "react-icons/rx";
 import { useNavigate } from "react-router-dom";
 import { FaCheck } from "react-icons/fa";
 import DataContext from "../context/DataContext";
+import MoodSelector from "../Utils/MoodSelector"; // Import MoodSelector component
 
 const Home = () => {
   const {
@@ -24,12 +25,19 @@ const Home = () => {
   } = useContext(DataContext);
 
   const navigate = useNavigate();
+  const [moodQuote, setMoodQuote] = useState("");
 
   return (
     <div className=" w-full relative min-h-screen pb-60 background-purple">
       <div className=" max-w-[1300px] px-3 m-auto">
         <div>
           <Greeting />
+          
+          <div className="max-w-[700px] mx-auto bg-blue-600 rounded-xl p-10 mt-5 background-dark">
+          <MoodSelector setMoodQuote={setMoodQuote} /> {/* Integrate MoodSelector */}
+          <p className="flex justify-center text-lg font-medium">{moodQuote}</p> {/* Display mood quote */}
+          </div>
+
           <DisplayTodos
             data={data}
             setData={setData}
