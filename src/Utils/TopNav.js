@@ -7,7 +7,7 @@ const TopNav = ({title}) => {
 
   return (
     <nav className=" py-7 max-sm:py-5  text-center text-3xl text-black flex items-center">
-      <div className=" rounded-lg p-1" title="Back" onClick={()=>navigate("/")}>
+      <div className=" rounded-lg p-1" title="Back" onClick={()=>navigate("/productivity-plan")}>
         <IoIosArrowBack className="text-4xl max-sm:text-2xl cursor-pointer" />
       </div>
       <h1 className="font-bold max-sm:text-2xl mx-auto">{title}</h1>

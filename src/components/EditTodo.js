@@ -90,7 +90,7 @@ const EditTodo = () => {
       setData(editIndex);
       localStorage.setItem("todoItems", JSON.stringify(editIndex));
       setEdit("");
-      navigate("/");
+      navigate("/productivity-pal");
 
       setEditNotificationTitle(edit.title);
       setEditNotification(true);
@@ -103,7 +103,7 @@ const EditTodo = () => {
 
   const handleCancel = () => {
     setEdit("");
-    navigate("/");
+    navigate("/productivity-pal");
   };
 
   const catagoryRef = useRef();
