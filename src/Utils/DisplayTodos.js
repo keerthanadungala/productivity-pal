@@ -97,9 +97,9 @@ const DisplayTodos = ({
             <div className="flex flex-col w-[60%] max-sm:w-[100%] mt-3 max-sm:mt-5 overflow-hidden">
               <div className="flex justify-between items-center">
                 <p>
-                  <span className={` ${handleTasksStatus() === "No tasks completed" ? "text-red-700" : handleTasksStatus() === "Less than half tasks completed" ? "text-red-700" : "text-lime-700"} font-semibold`}> Progress</span>
+                  <span className={` ${handleTasksStatus() === "No tasks completed" ? "text-red-800" : handleTasksStatus() === "Less than half tasks completed" ? "text-red-800" : "text-emerald-800"} font-semibold`}> Progress</span>
                 </p>
-                <p className={` ${handleTasksStatus() === "No tasks completed" ? "text-red-700" : handleTasksStatus() === "Less than half tasks completed" ? "text-red-700" : "text-lime-700"} font-semibold`}>{completedTask()}%</p>
+                <p className={` ${handleTasksStatus() === "No tasks completed" ? "text-red-800" : handleTasksStatus() === "Less than half tasks completed" ? "text-red-800" : "text-emerald-800"} font-semibold`}>{completedTask()}%</p>
               </div>
               <div className="mt-3" role="progressbar" aria-valuenow={completedTask()} aria-valuemin="0" aria-valuemax="100" style={{ '--value': `${completedTask()}`, position: 'relative', alignSelf: 'center' }}>
               </div>
