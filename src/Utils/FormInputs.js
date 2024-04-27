@@ -109,7 +109,7 @@ const FormInputs = ({
       setTaskName("");
       setTaskDescription("");
       setEmptyInputError(false);
-      navigate("/");
+      navigate("/productivity-pal");
 
       setAddNotificationTitle(taskName);
       setAddNotification(true);
